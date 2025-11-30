@@ -1,0 +1,25 @@
+{
+  "name": "cypress-utils-ahmad",
+  "version": "1.0.1",
+  "description": "Eigen commands",
+  "author": "Ahmad",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-clean": "npm run clean && npm run tscBuild && npm run copyDefinitions",
+    "clean": "rimraf dist",
+    "tscBuild": "tsc --build",
+    "playwright-open": "npx playwright test --ui --project=api"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "cpy": "^11.1.0",
+    "cypress": "^14.0.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.3.3"
+  }
+}
